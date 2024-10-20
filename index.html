@@ -12,17 +12,117 @@
         .img-home {
             width: 100%;
         }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            color: #ed4190;
+            font-size: 28px;
+            text-transform: uppercase;
+            margin: 12px 0px 16px;
+            font-weight: 300;
+            height: 34px;
+            position: relative;
+            display: block;
+            text-align: center;
+        }
+
+        h1::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: -20px;
+            /* Điều chỉnh vị trí gạch chân xuống dưới chữ */
+            margin: 12px 0px 16px;
+            width: 200px;
+            height: 3px;
+            transform: translateX(-50%) skewX(-12deg);
+            background: radial-gradient(circle, #cddc39, #fff);
+        }
+
+        h2 {
+            color: #ed4190;
+            margin: 5px 0px 10px;
+            font-size: 24px;
+            font-weight: 300;
+            height: 28px;
+        }
+
+        h3 {
+            margin: 5px 0px 10px;
+            color: #ed4190;
+            font-size: 20px;
+            font-weight: 300;
+            height: 24px;
+        }
+
+        .type-1 {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .img-type-1 {
+            width: 30%;
+        }
+
+        .content-type-1,
+        .content-type-2 {
+            width: 69%;
+            margin-bottom: 5px;
+            padding: 0px 5px;
+            text-align: center;
+
+        }
+
+        .type-2 {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .video-type-2 {
+            width: 30%;
+        }
+
+        .type-3 {
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .type-3 h3 {
+            break-before: column;
+        }
+
+        .contacts {
+            position: relative;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contacts ul li {
+            display: inline-block;
+            border: 1px solid #ed4190;
+            border-radius: 5px;
+            width: 24%;
+        }
+
+        li img {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <a href="./index.html">
-            <img id="logo" src="./logo.png" alt="logo">
+            <img id="logo" src="./images/logo.png" alt="logo">
         </a>
-        <img src="./yaourt-kiwi.png" alt="img-header-1" class="header-img1">
-        <img src="./yaourt-vietquat.png" alt="img-header-2" class="header-img2">
-        <img src="./yaourt-dau.png" alt="img-header-3" class="header-img3">
+        <img src="./images/yaourt-kiwi.png" alt="img-header-1" class="header-img1">
+        <img src="./images/yaourt-vietquat.png" alt="img-header-2" class="header-img2">
+        <img src="./images/yaourt-dau.png" alt="img-header-3" class="header-img3">
         <!-- Thanh điều hướng (Navigation) -->
         <nav>
             <a href="./index.html">Trang chủ</a>
@@ -40,75 +140,94 @@
 
         </nav>
     </header>
-    <main>
-        <article>
+    <main class="main-conntent">
+        <article class="container">
             <img src="https://cdn.tgdd.vn/2020/07/CookProduct/1112-1200x676-14.jpg" alt="hình nổi bật" class="img-home">
+            <h1>Sản phẩm mới</h1>
+            <h2>Sữa chua tốt cho sức khỏe</h2>
+            <div class="type-1">
+                <img src="https://dacnguyen.vn/wp-content/uploads/2022/10/4-12.jpg" alt="ảnh sữa chua"
+                    class="img-type-1">
 
-            <div>
-                <h1>Sản phẩm mới</h1>
-                <h2>Sữa chua tốt cho sức khỏe</h2>
-                <img src="https://dacnguyen.vn/wp-content/uploads/2022/10/4-12.jpg" alt="ảnh sữa chua">
-                <p>Sữa chua là một loại thực phẩm được tạo ra từ quá trình lên men sữa các vi khuẩn.
-                     Hầu hết các loại sữa đều có thể dùng làm sữa chua, tuy nhiên sữa bò là được dùng nhiều hơn hết.
-                     Sữa chua hay được gọi là yaourt (là da-ua). Chúng được lên men từ sữa động vật nhờ vi khuẩn lastic,
-                     đã được khử chất béo và thanh trùng ở nhiệt độ 80-90 độ C. Sữa chua có 2 loại cơ bản là sữa chau có đường
-                     và sữa chua không đường. Bên cạnh đó còn loại sữa chua uống, sữa chua men sống. Váng sữa thường được chia làm 3 laoij
-                     dựa vào hàm lương chất béo có trong sản phẩm: váng sữa có hàm lương chất béo cao nhất (35-50% chất béo), váng sữa 
-                     thông thường (10-30% chất béo), váng sữa nguyên kem(6-15% chất béo) <a href="#">Xem chi tiết</a> </p>
+                <p class="content-type-1">Sữa chua là một loại thực phẩm được tạo ra từ quá trình lên men sữa các vi
+                    khuẩn.
+                    Hầu hết các loại sữa đều có thể dùng làm sữa chua, tuy nhiên sữa bò là được dùng nhiều hơn hết.
+                    Sữa chua hay được gọi là yaourt (là da-ua). Chúng được lên men từ sữa động vật nhờ vi khuẩn lastic,
+                    đã được khử chất béo và thanh trùng ở nhiệt độ 80-90 độ C. Sữa chua có 2 loại cơ bản là sữa chau có
+                    đường
+                    và sữa chua không đường. Bên cạnh đó còn loại sữa chua uống, sữa chua men sống. Váng sữa thường được
+                    chia làm 3 laoij
+                    dựa vào hàm lương chất béo có trong sản phẩm: váng sữa có hàm lương chất béo cao nhất (35-50% chất
+                    béo), váng sữa
+                    thông thường (10-30% chất béo), váng sữa nguyên kem(6-15% chất béo) <a href="#">Xem chi tiết</a>
+                </p>
             </div>
 
-            <div>
-                <h1>Góc thành viên</h1>
-                <h2>Sữa chua làm nhà</h2>
+            <h1>Góc thành viên</h1>
+            <h2>Sữa chua làm nhà</h2>
+            <div class="type-2">
+
+                <p class="content-type-2">Sữa chua (yaourt) là một món tráng miệng vừa ngon lại phù hợp cho nhiều lứa
+                    tuổi vì cung cấp nhiều
+                    chất dinh dưỡng,
+                    hỗ trợ tiêu hóa và giúp làm đẹp da. Vào bếp xem ngay 2 cách làm sữa chua (yaourt) chuẩn vị ngay tại
+                    nhà cho gia đình
+                    cùng thưởng thức nhé! <a href="#">Xem chi tiết</a></p>
                 <iframe width="420" height="315" src="https://www.youtube.com/embed/iu6ACUsGl4o" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    allowfullscreen class="video-type-2">
                 </iframe>
-                <p>Sữa chua (yaourt) là một món tráng miệng vừa ngon lại phù hợp cho nhiều lứa tuổi vì cung cấp nhiều chất dinh dưỡng, 
-                    hỗ trợ tiêu hóa và giúp làm đẹp da. Vào bếp xem ngay 2 cách làm sữa chua (yaourt) chuẩn vị ngay tại nhà cho gia đình
-                    cùng thưởng thức nhé! <a href="#">Xem chi tiết</a></p>
             </div>
-
-            <div>
-                <h2>Hướng dẫn làm sữa chua không đường</h2>
+            <h2>Hướng dẫn làm sữa chua không đường</h2>
+            <div class="type-3">
                 <h3>Nguyên liệu làm sữa chua không đường</h3>
                 <ul>
                     <li>1 lít sữa tươi không đường</li>
-                    <li>1 hộp sữa chua men cái không đường (bạn có thể mua sữa chua đóng hộp không đường như Vinamilk, TH True Milk,...)</li>
+                    <li>1 hộp sữa chua men cái không đường (bạn có thể mua sữa chua đóng hộp không đường như
+                        Vinamilk,
+                        TH True Milk,...)</li>
                     <li>Dụng cụ nấu và ủ sữa chua</li>
                 </ul>
+
+
+
                 <h3>Các bước thực hiện</h3>
                 <ol>
-                    <li>Cho sữa chua không đường vào nồi, đun nóng lên và khuấy đều, nhẹ tay theo 1 chiều. Tới khi sữa đạt khoảng 40 độ C thì tắt bếp.
+                    <li>Cho sữa chua không đường vào nồi, đun nóng lên và khuấy đều, nhẹ tay theo 1 chiều. Tới khi
+                        sữa
+                        đạt khoảng 40 độ C thì tắt bếp.
                         Bạn có thể dùng tay để kiểm tra, thấy sữa vùa phải là được.
                     </li>
                     <li>Đổ hộp sữa chua lên mem cái vào và khuất đều, múc vào hủ và đem đi ủ 6-8 tiếng.</li>
-                    <li>Sau khi ủ xong, bạn có thể dùng 1 hủ sữa chua vùa ủ để ăn thử, nếu thấy đạt vị sữa chua rồi có thể bảo qunar trong ngăn mát tủ lạnh
+                    <li>Sau khi ủ xong, bạn có thể dùng 1 hủ sữa chua vùa ủ để ăn thử, nếu thấy đạt vị sữa chua rồi
+                        có
+                        thể bảo qunar trong ngăn mát tủ lạnh
                         và thưởng thức ngay nhé.
                     </li>
                 </ol>
-            </div>
 
-            <div>
-                <h2>Đặt hàng ngay</h2>
+
+            </div>
+            <h2>Đặt hàng ngay</h2>
+            <div class="contacts">
                 <ul>
                     <li>
-                        <img src="" alt="">
+                        <img src="./images/index/order-1.png" alt="">
                         <p>Gọi điện</p>
                         </img>
                     </li>
                     <li>
-                        <img src="" alt="">
+                        <img src="./images/index/order-2.png" alt="">
                         <p>Đặt hàng</p>
                         </img>
                     </li>
                     <li>
-                        <img src="" alt="">
+                        <img src="./images/index/order-3.png" alt="">
                         <p>Nhận hàng</p>
                         </img>
                     </li>
                     <li>
-                        <img src="" alt="">
+                        <img src="./images/index/orrder-4.png" alt="">
                         <p>Thanh toán</p>
                         </img>
                     </li>
