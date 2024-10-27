@@ -8,7 +8,52 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7ccdb29924.js" crossorigin="anonymous"></script>
+    <style>
+        legend {
+            position: relative;
+            color: #ed4190;
+            font-size: 34px;
+            font-weight: 300;
+            text-align: center;
+            display: block;
+        }
 
+        legend::after {
+            position: absolute;
+            content: "";
+            width: 200px;
+            height: 3px;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background: radial-gradient(circle, #cddc39, #fff);
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        input {
+            padding: 4px;
+        }
+
+        label i {
+            background-color: #cddc39;
+            color: #fff;
+            padding: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        input[type='submit'],
+        input[type='reset'] {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,13 +82,14 @@
         </nav>
     </header>
     <main>
-        <form action="" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <legend>Đăng ký</legend>
+        <fieldset>
+            <legend>Đăng ký</legend>
+            <form action="" method="post" enctype="multipart/form-data">
+
                 <table>
                     <tr>
                         <td>
-                            <label for="email">Email:</label>
+                            <label for="email"><i class="fa-solid fa-envelope"></i></label>
                         </td>
                         <td>
                             <input type="text" placeholder="Vui lòng nhập email" name="" id="email">
@@ -51,7 +97,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="password">Mật khẩu:</label>
+                            <label for="password"><i class="fa-solid fa-lock"></i></label>
                         </td>
                         <td>
                             <input type="password" placeholder="Vui lòng nhập mật khẩu" name="" id="password">
@@ -59,7 +105,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="password2">Nhập lại mật khẩu:</label>
+                            <label for="password2"><i class="fa-solid fa-lock"></i></label>
                         </td>
                         <td>
                             <input type="password" placeholder="Vui lòng nhập lại mật khẩu" name="" id="password2">
@@ -67,7 +113,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="levels">Cấp độ thành viên</label>
+                            <label for="levels"><i class="fa-solid fa-users"></i></label>
                         </td>
                         <td>
                             <input type="radio" name="levels" value="Bạc">Bạc
@@ -76,9 +122,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Ảnh đại diện:</td>
+                        <td><label for="avatar"><i class="fa-solid fa-user"></i></label></td>
                         <td>
-                            <input type="file" name="" id="">
+                            <input type="file" name="" id="avatar">
                         </td>
                     </tr>
                     <tr>
@@ -93,9 +139,9 @@
                         </td>
                     </tr>
                 </table>
-            </fieldset>
-        </form>
 
+            </form>
+        </fieldset>
 
     </main>
     <footer>

@@ -10,9 +10,61 @@
     <script src="https://kit.fontawesome.com/7ccdb29924.js" crossorigin="anonymous"></script>
 
     <style>
+        section {
+            display: flex;
+            margin: 10px auto;
+            color: #ed4190;
+        }
+
+        section div {
+            border: 1px solid #dbd7d9;
+            border-radius: 4px;
+            display: flex;
+            margin: 3px;
+            padding: 0;
+            color: #ed4190;
+            background: linear-gradient(to top, #cddc39 0%, rgba(205, 220, 57, 0) 10%);
+            flex-direction: column;
+
+        }
+
+        span {
+            margin: 4px;
+            padding: 3px;
+            width: 100%;
+            color: #ffff;
+            display: block;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ed4190;
+            font-size: 28px;
+            position: relative;
+            text-align: center;
+            display: block;
+            margin: 10px;
+        }
+
+        h1::after {
+            position: absolute;
+            content: "";
+            width: 300px;
+            transform: translateX(-50%) skewX(-12deg);
+            background: radial-gradient(circle, #cddc39, #fff);
+            height: 3px;
+            left: 50%;
+            bottom: 0
+        }
+
+        h2 {
+            text-align: center;
+            margin: 6px;
+        }
+
         .img-product {
-            width: 20%;
-            height: 20%;
+            width: 100%;
+            height: 200px;
             object-fit: cover;
         }
     </style>
@@ -48,129 +100,181 @@
         <article>
             <h1>Sản phẩm truyền thống</h1>
             <section>
-                <h2>Sữa chua vị Chocolate</h2>
-                <img src="./images/products/yaourt-choco.jpg" alt="sữa chua chocolate" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
-            </section>
+                <div>
+                    <h2>Sữa chua vị Chocolate</h2>
+                    <img src="./images/products/yaourt-choco.jpg" alt="sữa chua chocolate" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
 
-            <section>
-                <h2>Sữa chua Trái cây</h2>
-                <img src="./images/products/yaourt-fruit.jpg" alt="sữa chua trái cây" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
-            </section>
 
-            <section>
-                <h2>Sữa chua Nha đam</h2>
-                <img src="./images/products/yaourt-nha dam.jpg" alt="sữa chua Nha đam" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
-            </section>
+                <div>
+                    <h2>Sữa chua Trái cây</h2>
+                    <img src="./images/products/yaourt-fruit.jpg" alt="sữa chua trái cây" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
 
-            <section>
-                <h2>Sữa chua vị Xoài</h2>
-                <img src="./images/products/yaourt-xoai.jpg" alt="sữa chua xoài" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
-            </section>
+                <div>
+                    <h2>Sữa chua Nha đam</h2>
+                    <img src="./images/products/yaourt-nha dam.jpg" alt="sữa chua Nha đam" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
 
-            <section>
-                <h2>Sữa chua vị Việt quất</h2>
-                <img src="./images/products/yaourt-blueberry.jpg" alt="sữa chua việt quất" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
             </section>
-
+            <h1>Sản phẩm mới</h1>
             <section>
-                <h2>Sữa chua vị Dưa lưới</h2>
-                <img src="./images/products/yaourt-dualuoi.png" alt="sữa chua dưa lưới" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
+                <div>
+                    <h2>Sữa chua vị Xoài</h2>
+                    <img src="./images/products/yaourt-xoai.jpg" alt="sữa chua xoài" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
+
+
+
+                <div>
+                    <h2>Sữa chua vị Việt quất</h2>
+                    <img src="./images/products/yaourt-blueberry.jpg" alt="sữa chua việt quất" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
+
+
+                <div>
+                    <h2>Sữa chua vị Dưa lưới</h2>
+                    <img src="./images/products/yaourt-dualuoi.png" alt="sữa chua dưa lưới" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
+
+
             </section>
-
+            <h1>Sản phẩm trái cây miền nhiệt đới</h1>
             <section>
-                <h2>Sữa chua vị Dâu</h2>
-                <img src="./images/products/yaourt-strawberry.jpg" alt="sữa chua dâu" class="img-product">
-                <p>
-                    Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
-                    với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
-                    topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
-                    có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
-                    vụn hoặc bột cacao để tăng thêm hương vị
-                    <a href="">Xem chi tiết</a>
-                </p>
-                <span>
-                    Số lượng:
-                    <input type="number" name="" id="" min="0" max="100" value="0" size="3">
-                    <button type="submit">Đặt hàng</button>
-                </span>
+                <div>
+                    <h2>Sữa chua vị Dâu</h2>
+                    <img src="./images/products/yaourt-strawberry.jpg" alt="sữa chua dâu" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
+
+
+                <div>
+                    <h2>Sữa chua vị Kiwi</h2>
+                    <img src="./images/products/yaourt-kiwi.jpg" alt="sữa chua dâu" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
+
+                <div>
+                    <h2>Sữa chua Cam </h2>
+                    <img src="./images/products/yaour-cam.png" alt="sữa chua dâu" class="img-product">
+                    <p>
+                        Bingsu Chocolate là một món tráng miệng đá bào nổi tiếng từ Hàn Quốc,
+                        với sự kết hợp hoàn hảo của đá bào mịn, chocolate đậm đà và các loại
+                        topping phong phú. Được làm từ đá bào mịn như tuyết, bingsu thường
+                        có lớp sốt chocolate ngọt ngào rưới lên trên, kết hợp cùng socola
+                        vụn hoặc bột cacao để tăng thêm hương vị
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                    <span>
+                        Số lượng:
+                        <input type="number" name="" id="" min="0" max="100" value="0" size="3">
+                        <button type="submit">Đặt hàng</button>
+                    </span>
+                </div>
+
+
             </section>
         </article>
 

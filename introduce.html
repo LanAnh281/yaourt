@@ -12,6 +12,43 @@
         .img-new {
             width: 400px;
         }
+
+        main {
+            display: flex;
+        }
+
+        .main-content {
+            width: 75%;
+        }
+
+        .sidebar-content {
+            width: 25%;
+        }
+
+        h1 {
+            color: #ed4190;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 34px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1::after {
+            position: absolute;
+            content: "";
+            background: radial-gradient(circle, #cdde39, #fff);
+            width: 200px;
+            height: 3px;
+            transform: translateX(-70%);
+            bottom: 0;
+        }
+
+        .img-introduce {
+            width: 100%;
+            object-fit: cover;
+            height: 420px;
+        }
     </style>
 </head>
 
@@ -41,10 +78,11 @@
         </nav>
     </header>
     <main>
-        <article>
+        <article class="main-content">
             <div>
                 <h1>Giới thiệu</h1>
-                <img src="./images/introduce.jpg" alt="ảnh giới thiệu">
+                <img src="https://dayphache.edu.vn/wp-content/uploads/2019/05/hinh-sua-chua-hoa-qua.jpg"
+                    alt="ảnh giới thiệu" class="img-introduce">
             </div>
             <div>
                 <h1>Câu chuyện thương hiệu</h1>
@@ -79,9 +117,13 @@
             </div>
             <div>
                 <h1>Những khởi đầu thuận lợi</h1>
-                <span></span>
                 <p>Khác với nhiều thương hiệu F&B ...</p>
             </div>
+        </article>
+        <article class="sidebar-content">
+            <h1>Hãy đăng ký thành viên ngay hôm nay</h1>
+            <p>Thành viên được hưởng nhiều ưu đãi tham gia khóa học học miễn phí, tham gia các cuộc thi, nhận tài liệu
+                các món mới...</p>
         </article>
 
     </main>

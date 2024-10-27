@@ -8,7 +8,54 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7ccdb29924.js" crossorigin="anonymous"></script>
+    <style>
+        fieldset {
+            border: none;
+            margin: 10px;
+        }
 
+        legend {
+            color: #ed4190;
+            font-weight: 300;
+            font-size: 34px;
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        legend::after {
+            position: absolute;
+            content: "";
+            background: radial-gradient(circle, #cddc39, #fff);
+            height: 3px;
+            width: 200px;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: 0;
+        }
+
+        .login-icon {
+            display: block;
+            margin: 0 auto;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        label i {
+            background-color: #cddc39;
+            color: #fff;
+            padding: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,14 +85,15 @@
     </header>
 
     <main>
-        <form action="" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <legan>Đăng Nhập</legan>
-                <img src="./images/login.png" alt="login-icon">
+        <fieldset>
+            <legend>Đăng nhập</legend>
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <img src="./images/login.png" alt="login-icon" class="login-icon">
                 <table>
                     <tr>
                         <td>
-                            <label for="email">Email:</label>
+                            <label for="email"><i class="fa-solid fa-envelope"></i></label>
                         </td>
                         <td>
                             <input type="text" name="" id="email" placeholder="Nhập email">
@@ -53,7 +101,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="password">Mật khẩu:</label>
+                            <label for="password"><i class="fa-solid fa-lock"></i></label>
                         </td>
                         <td>
                             <input type="text" name="" id="password" placeholder="Nhập mật khẩu">
@@ -77,8 +125,9 @@
                         <td></td>
                     </tr>
                 </table>
-            </fieldset>
-        </form>
+            </form>
+        </fieldset>
+
     </main>
     <footer>
         <p>&copy 2021 Bản quyền thuộc về freeezeVN

@@ -10,6 +10,71 @@
     <script src="https://kit.fontawesome.com/7ccdb29924.js" crossorigin="anonymous"></script>
 
 </head>
+<style>
+    h1,
+    legend {
+        position: relative;
+        color: #ed4190;
+        font-size: 34px;
+        font-weight: 300;
+        text-align: center;
+        margin: 10px;
+    }
+
+    h1::after,
+    legend::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 200px;
+        background: radial-gradient(circle, #cddc39, #fff);
+        bottom: -8px;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .address {
+        display: flex;
+        /* align-items: center; */
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 200;
+    }
+
+    .img-location {
+        width: 4%;
+        background-color: #cddc39;
+        color: #ed4190;
+        margin-right: 10px;
+        /* Khoảng cách giữa hình ảnh và tiêu đề */
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    td {
+        margin: 6px;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: 4px;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    label i {
+        background-color: #cddc39;
+        color: #fff;
+        padding: 10px;
+    }
+</style>
 
 <body>
     <header>
@@ -38,15 +103,20 @@
     </header>
     <main>
         <h1>Liên hệ</h1>
-        <img src="" alt="contact">
-        <h2>Địa chỉ:</h2>
-        <form action="" method="post">
-            <fieldset>
-                <legend>Gợi ý</legend>
+        <div class="address">
+            <img src="./images/contact/point-location.png" alt="contact" class="img-location">
+            <h2>Địa chỉ:557/9 Trần Quang Diệu, P. An Thới, Q. Bình Thủy, TPCT. Nếu bạn có góp ý, vui lòng
+                liên hệ bằng thư điện tử hoặc sử dụng biểu mẫu bên dưới. Xin cảm ơn.
+            </h2>
+        </div>
+        <fieldset>
+            <legend>GÓP Ý</legend>
+            <form action="" method="post">
+
                 <table>
                     <tr>
                         <td>
-                            <label for="name">Họ tên:</label>
+                            <label for="name"><i class="fa-solid fa-user"></i></label>
                         </td>
                         <td>
                             <input type="text" name="" id="name" placeholder="Vui lòng nhập họ và tên bạn">
@@ -54,7 +124,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="email">Email:</label>
+                            <label for="email"><i class="fa-solid fa-envelope"></i></label>
                         </td>
                         <td>
                             <input type="text" name="" id="email" placeholder="Vui lòng nhập email của bạn">
@@ -62,7 +132,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="catogories">Chủ đề:</label>
+                            <label for="catogories"><i class="fa-solid fa-list"></i></label>
                         </td>
                         <td>
                             <select name="" id="" size="1">
@@ -74,7 +144,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="content">Nội dung:</label>
+                            <label for="content"><i class="fa-solid fa-pager"></i></label>
                         </td>
                         <td>
                             <textarea name="" id="" cols="50" rows="7"></textarea>
@@ -86,8 +156,9 @@
                         </td>
                     </tr>
                 </table>
-            </fieldset>
-        </form>
+            </form>
+        </fieldset>
+
     </main>
 
     <footer>
