@@ -22,14 +22,6 @@ main {
     display: grid;
 }
 
-aside {
-    margin: 2px;
-    padding: 5px;
-    color: #000;
-    text-align: center;
-    grid-area: 1fr 3fr 1fr;
-}
-
 header {
     position: relative;
     border: 1px solid #ccc7c8;
@@ -38,6 +30,58 @@ header {
     height: 100px;
     margin-bottom: 2px;
     background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-event-promotion-wind-taobao-yogurt-poster-image_190297.jpg');
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
+    /* left: 100px; */
+    width: 100%;
+}
+
+.nav-links a {
+    margin: 3px;
+    border: 1px solid #ffff;
+    border-radius: 5px;
+    padding: 2px 4px;
+    color: #ed4190;
+    background-color: #ffffff80;
+    font-size: 17px;
+    text-decoration: none;
+    box-shadow: 0 0 3px 0 #00000066,
+        0 0 2px 0 #0000004d;
+}
+
+
+nav a:hover {
+    background-color: #ed4190;
+    color: #fff;
+}
+
+input[type=search] {
+    padding: 4px;
+    border-radius: 5px
+}
+
+.icon-search,
+.icon-cart {
+    padding: 4px;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #cddc39;
+    color: #fff;
+}
+
+
+
+.icon-search:hover,
+.icon-cart:hover {
+    cursor: pointer;
+    color: #ed4190;
 }
 
 .header-img1,
@@ -96,70 +140,13 @@ header {
 }
 
 
-nav {
-    position: absolute;
-    bottom: 10px;
-    left: 100px;
-    display: inline-block;
-}
 
-nav a {
-    margin: 3px;
-    border: 1px solid #ffff;
-    border-radius: 5px;
-    padding: 2px 4px;
-    color: #ed4190;
-    background-color: #ffffff80;
-    font-size: 17px;
-    text-decoration: none;
-    box-shadow: 0 0 3px 0 #00000066,
-        0 0 2px 0 #0000004d;
-}
-
-nav a:hover {
-    background-color: #ed4190;
-    color: #fff;
-}
-
-.search-cart {
-    position: relative;
-    top: 3px;
-}
 
 #logo {
     width: 100px;
     height: 100px;
 }
 
-input[type=search] {
-    padding: 4px;
-    border-radius: 5px
-}
-
-.search-cart {
-    display: inline-block;
-    position: relative;
-    bottom: 10px;
-
-}
-
-.icon-search,
-.icon-cart {
-    padding: 4px;
-    min-width: 30px;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #cddc39;
-    color: #fff;
-}
-
-
-
-.icon-search:hover,
-.icon-cart:hover {
-    cursor: pointer;
-    color: #ed4190;
-}
 
 footer {
 

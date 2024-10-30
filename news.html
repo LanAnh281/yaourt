@@ -14,6 +14,70 @@
         }
     </style>
 </head>
+<style>
+    h1 {
+        position: relative;
+        font-size: 34px;
+        color: #ed4190;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 4px auto;
+    }
+
+    h1::after {
+        position: absolute;
+        content: "";
+        background: radial-gradient(circle, #cddc39, #fff);
+        height: 3px;
+        width: 200px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h2 {
+        color: #ed4190;
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    main {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+
+    }
+
+    .main-content {
+        margin: 0 4px;
+        width: 75%;
+    }
+
+    .sidebar-content {
+        width: 25%;
+    }
+
+    .sidebar-content img {
+        width: 100%;
+    }
+
+    .news-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .news-item .news-description {
+        width: 75%;
+    }
+
+    .news-item .news-image {
+        width: 25%;
+        height: auto;
+    }
+</style>
 
 <body>
     <header>
@@ -25,13 +89,16 @@
         <img src="./images/yaourt-dau.png" alt="img-header-3" class="header-img3">
         <!-- Thanh điều hướng (Navigation) -->
         <nav>
-            <a href="./index.html">Trang chủ</a>
-            <a href="./introduce.html">Giới thiệu</a>
-            <a href="./products.html">Sản phẩm</a>
-            <a href="./news.html">Tin tức</a>
-            <a href="./login.html">Đăng nhập</a>
-            <a href="./register.html">Đăng ký</a>
-            <a href="./contact.html">Liên hệ</a>
+            <div class="nav-links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./introduce.html">Giới thiệu</a>
+                <a href="./products.html">Sản phẩm</a>
+                <a href="./news.html">Tin tức</a>
+                <a href="./login.html">Đăng nhập</a>
+                <a href="./register.html">Đăng ký</a>
+                <a href="./contact.html">Liên hệ</a>
+            </div>
+
             <div class="search-cart">
                 <input type="search" name="search" id="" placeholder="Nhập nội dung cần tìm ...">
                 <i class="fa-solid fa-magnifying-glass icon-search"></i>
@@ -41,91 +108,104 @@
         </nav>
     </header>
     <main>
-        <article>
+        <!--  -->
+        <aside class="sidebar-content">
+
+            <h1>ĐƯỢC QUAN TÂM</h1>
+            <img src="./images/news/new-7.jpg" alt="ảnh tin tức" class="img-new">
+            <p>
+                Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                <i class="fa-solid fa-rainbow" style="color:red"></i>
+                <a href="">Xem chi tiết</a>
+            </p>
+
+        </aside>
+
+        <article class="main-content">
             <h1>Tin tức</h1>
-            <div>
-                <h2>Lộ diện siêu năng lực từ trái xoài</h2>
-                <img src="./images/news/new-1.jpg" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
-                    bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
-                    có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
-                    bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
-                    <a href="">Xem chi tiết</a>
-                </p>
+            <div class="news-item">
+                <div class="news-description">
+                    <h2>Lộ diện siêu năng lực từ trái xoài</h2>
+                    <p>
+                        Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                        bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                        có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                        bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                </div>
+                <img src="./images/news/new-1.jpg" alt="ảnh tin tức" class="news-image">
             </div>
             <!-- 2 -->
-            <div>
-                <h2>Lộ diện siêu năng lực từ trái xoài</h2>
-                <img src="./images/news/new-2.jpg" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
-                    bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
-                    có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
-                    bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
-                    <a href="">Xem chi tiết</a>
-                </p>
+            <div class="news-item">
+                <div class="news-description">
+                    <h2>Lộ diện siêu năng lực từ trái xoài</h2>
+                    <p>
+                        Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                        bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                        có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                        bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                </div>
+                <img src="./images/news/new-2.jpg" alt="ảnh tin tức" class="news-image">
             </div>
-            <div>
-                <h2>Lộ diện siêu năng lực từ trái dâu</h2>
-                <img src="./images/news/new-3.jpg" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Nguồn phong phú chất chống ô xy hóa flavonoid trong dâu tây giúp cải thiện sức khỏe não bộ và giảm
-                    viêm,
-                    theo nghiên cứu của các nhà khoa học thuộc Đại học Tufts (Mỹ) đăng trên chuyên san American Journal
-                    of Clinical
-                    Nutrition. Viêm có liên quan đến các dạng suy giảm trí nhớ.
-                    <a href="#">Xem chi tiết</a>
-                </p>
+            <div class="news-item">
+                <div class="news-description">
+                    <h2>Lộ diện siêu năng lực từ trái xoài</h2>
+                    <p>
+                        Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                        bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                        có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                        bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                </div>
+                <img src="./images/news/new-3.jpg" alt="ảnh tin tức" class="news-image">
             </div>
-            <div>
-                <h2>Lộ diện siêu năng lực từ trái xoài</h2>
-                <img src="./images/news/new-4.jpg" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
-                    bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
-                    có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
-                    bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
-                    <a href="">Xem chi tiết</a>
-                </p>
+            <div class="news-item">
+                <div class="news-description">
+                    <h2>Lộ diện siêu năng lực từ trái xoài</h2>
+                    <p>
+                        Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                        bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                        có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                        bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                </div>
+                <img src="./images/news/new-4.jpg" alt="ảnh tin tức" class="news-image">
             </div>
-            <div>
-                <h2>Lộ diện siêu năng lực từ trái xoài</h2>
-                <img src="./images/news/new-5.png" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
-                    bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
-                    có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
-                    bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
-                    <a href="">Xem chi tiết</a>
-                </p>
+            <div class="news-item">
+                <div class="news-description">
+                    <h2>Lộ diện siêu năng lực từ trái xoài</h2>
+                    <p>
+                        Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                        bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                        có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                        bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                </div>
+                <img src="./images/news/new-5.png" alt="ảnh tin tức" class="news-image">
             </div>
-            <div>
-                <h2>Lộ diện siêu năng lực từ trái xoài</h2>
-                <img src="./images/news/new-6.jpg" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
-                    bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
-                    có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
-                    bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
-                    <a href="">Xem chi tiết</a>
-                </p>
+            <div class="news-item">
+                <div class="news-description">
+                    <h2>Lộ diện siêu năng lực từ trái xoài</h2>
+                    <p>
+                        Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
+                        bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
+                        có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
+                        bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
+                        <a href="">Xem chi tiết</a>
+                    </p>
+                </div>
+                <img src="./images/news/new-6.jpg" alt="ảnh tin tức" class="news-image">
             </div>
-            <!--  -->
-            <aside>
 
-                <h1>ĐƯỢC QUAN TÂM</h1>
-                <img src="./images/news/new-7.jpg" alt="ảnh tin tức" class="img-new">
-                <p>
-                    Trái cây là nguồn cung cấp nhiều chất dinh dưỡng thiết yếu được tiêu thụ ít,
-                    bao gồm kali, chất xơ, vitamin C và folate (axit folic). Chế độ ăn giàu kali
-                    có thể giúp duy trì huyết áp khỏe mạnh. Các nguồn trái cây cung cấp kali
-                    bao gồm chuối, mận khô và nước ép mận, đào và mơ khô, dưa hấu, dưa mật và nước cam.
-                    <i class="fa-solid fa-rainbow" style="color:red"></i>
-                    <a href="">Xem chi tiết</a>
-                </p>
-
-            </aside>
 
         </article>
 
